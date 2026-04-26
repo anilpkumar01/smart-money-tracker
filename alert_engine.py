@@ -42,16 +42,7 @@ def _send_toast(title: str, message: str, duration: int = 8):
             threaded=True,   # non-blocking
         )
     except ImportError:
-        # Fallback: plyer (cross-platform)
-        try:
-            from plyer import notification
-            notification.notify(
-                title=title,
-                message=message,
-                timeout=duration,
-            )
-        except Exception:
-            log.info(f"[ALERT — no toast] {title}: {message}")
+        log.info(f"[ALERT — no toast available] {title}: {message}")
     except Exception as e:
         log.warning(f"Toast failed ({e}) — {title}: {message}")
 

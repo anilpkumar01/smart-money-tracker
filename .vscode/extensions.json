@@ -1,0 +1,13 @@
+{
+    // VSCode will show "Install recommended extensions?" when you open this folder.
+    // Click Install All — these are everything you need to run this project.
+    "recommendations": [
+        "ms-python.python",          // Python language support + IntelliSense
+        "ms-python.vscode-pylance",  // Fast type checking and autocomplete
+        "ms-python.autopep8",        // Auto-format Python on save
+        "ms-toolsai.jupyter",        // Run .ipynb notebooks if needed
+        "mechatroner.rainbow-csv",   // Colour-coded CSV viewer (for data/ folder)
+        "usernamehw.errorlens",      // Shows errors inline — very helpful
+        "streetsidesoftware.code-spell-checker" // Catches typos in comments
+    ]
+}

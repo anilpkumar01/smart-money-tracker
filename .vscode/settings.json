@@ -1,0 +1,46 @@
+{
+    // ── Python interpreter ───────────────────────────────────────────────────
+    // Points VSCode to the venv — no manual "Select Interpreter" needed
+    "python.defaultInterpreterPath": "${workspaceFolder}\\venv\\Scripts\\python.exe",
+    "python.terminal.activateEnvironment": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
+
+    // ── Terminal: use PowerShell on Windows 11 ───────────────────────────────
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        }
+    },
+    // Auto-activate venv in every new terminal
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}"
+    },
+
+    // ── Editor comfort settings ──────────────────────────────────────────────
+    "editor.formatOnSave": true,
+    "editor.rulers": [88],
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.wordWrap": "on",
+
+    // ── File Explorer — hide clutter ─────────────────────────────────────────
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "**/.pytest_cache": true
+    },
+
+    // ── Python linting & formatting ──────────────────────────────────────────
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8",
+        "editor.formatOnSave": true
+    },
+
+    // ── Streamlit: treat .py files with st.* as Python (already default) ─────
+    "files.associations": {
+        "*.py": "python"
+    }
+}
+
